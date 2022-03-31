@@ -9,7 +9,7 @@ def readme():
 
 setup(
     name="pyrm",
-    version="0.1.9000",
+    version="0.1.1",
     description="Package for pulling Reagent Mfg and QC data",
     url="https://github.com/niranjan-ilawe/PyRMPackage",
     author="Niranjan Ilawe",

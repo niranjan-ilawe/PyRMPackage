@@ -46,6 +46,8 @@ def get_sg_formulation_data(days=3):
     )
 
     df = df.reset_index()
+    df["PN"] = df["PN"].str.strip()
+    df["LN"] = df["LN"].str.strip()
 
     return df
 
@@ -67,6 +69,8 @@ def get_ca_formulation_data(days=3):
     )
 
     df = df.reset_index()
+    df["PN"] = df["PN"].str.strip()
+    df["LN"] = df["LN"].str.strip()
 
     return df
 
