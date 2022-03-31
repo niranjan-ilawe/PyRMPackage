@@ -22,6 +22,8 @@ def parse_formulation_br(file):
                 "lot number": str,
             },
         )
+        tmp["PN"] = tmp["PN"].str.strip()
+        tmp["LN"] = tmp["LN"].str.strip()
     except:
         print(f"### --- {file} skipped --- ###")
         tmp = pd.DataFrame()
@@ -46,8 +48,6 @@ def get_sg_formulation_data(days=3):
     )
 
     df = df.reset_index()
-    df["PN"] = df["PN"].str.strip()
-    df["LN"] = df["LN"].str.strip()
 
     return df
 
@@ -69,8 +69,6 @@ def get_ca_formulation_data(days=3):
     )
 
     df = df.reset_index()
-    df["PN"] = df["PN"].str.strip()
-    df["LN"] = df["LN"].str.strip()
 
     return df
 
